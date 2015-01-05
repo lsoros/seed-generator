@@ -1,4 +1,6 @@
 seed-generator
 ==============
 
-The Seed Generator is a utility for Chromaria that allows users to create their own seed morphologies.
+The Seed Generator is a [Chromaria](https://github.com/lsoros/chromaria) utility for creating  seed morphologies.
+
+
