@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{446B0E91-6B0A-4F68-8D08-50216D007760}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SeedGenerator</RootNamespace>
+    <AssemblyName>SeedGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="SharpNEATLib\CPPNs\ControllerSubstrate.cs" />
+    <Compile Include="SharpNEATLib\CPPNs\CPPNDotWriterStatic.cs" />
+    <Compile Include="SharpNEATLib\CPPNs\NeuronGroup.cs" />
+    <Compile Include="SharpNEATLib\CPPNs\Substrate.cs" />
+    <Compile Include="SharpNEATLib\CPPNs\SubstrateDescription.cs" />
+    <Compile Include="SharpNEATLib\CPPNs\SubstrateEvolution.cs" />
+    <Compile Include="SharpNEATLib\Evolution\AbstractGenome.cs" />
+    <Compile Include="SharpNEATLib\Evolution\BehaviorType.cs" />
+    <Compile Include="SharpNEATLib\Evolution\ConnectionEndpointsStruct.cs" />
+    <Compile Include="SharpNEATLib\Evolution\EvolutionAlgorithm.cs" />
+    <Compile Include="SharpNEATLib\Evolution\GenomeAgeComparer.cs" />
+    <Compile Include="SharpNEATLib\Evolution\GenomeComparer.cs" />
+    <Compile Include="SharpNEATLib\Evolution\GenomeList.cs" />
+    <Compile Include="SharpNEATLib\Evolution\IdGenerator.cs" />
+    <Compile Include="SharpNEATLib\Evolution\IGenome.cs" />
+    <Compile Include="SharpNEATLib\Evolution\IIdGeneratorFactory.cs" />
+    <Compile Include="SharpNEATLib\Evolution\IPopulationEvaluator.cs" />
+    <Compile Include="SharpNEATLib\Evolution\Multiobjective.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NeatParameters.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NeatParameters\ConnectionMutationParameterGroup.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NeatParameters\ConnectionMutationParameterGroupList.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NeatParameters\ConnectionPerturbationType.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NeatParameters\ConnectionSelectionType.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NewConnectionGeneStruct.cs" />
+    <Compile Include="SharpNEATLib\Evolution\NewNeuronGeneStruct.cs" />
+    <Compile Include="SharpNEATLib\Evolution\Population.cs" />
+    <Compile Include="SharpNEATLib\Evolution\PruningModeGenomeComparer.cs" />
+    <Compile Include="SharpNEATLib\Evolution\Species.cs" />
+    <Compile Include="SharpNEATLib\Evolution\Xml\IGenomeReader.cs" />
+    <Compile Include="SharpNEATLib\Evolution\Xml\XmlPopulationReaderStatic.cs" />
+    <Compile Include="SharpNEATLib\Evolution\Xml\XmlPopulationWriterStatic.cs" />
+    <Compile Include="SharpNEATLib\Experiments\AbstractExperimentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharpNEATLib\Experiments\HyperNEATParameters.cs" />
+    <Compile Include="SharpNEATLib\Experiments\IExperiment.cs" />
+    <Compile Include="SharpNEATLib\Experiments\INetworkEvaluator.cs" />
+    <Compile Include="SharpNEATLib\Experiments\INetworkPairEvaluator.cs" />
+    <Compile Include="SharpNEATLib\Experiments\ISimulator.cs" />
+    <Compile Include="SharpNEATLib\Experiments\MultiThreadedPopulationEvaluator.cs" />
+    <Compile Include="SharpNEATLib\Experiments\SingleFilePopulationEvaluator.cs" />
+    <Compile Include="SharpNEATLib\ExperimentUtils\Functions\IFunction.cs" />
+    <Compile Include="SharpNEATLib\ExperimentUtils\Functions\LogisticMapFunction.cs" />
+    <Compile Include="SharpNEATLib\ExperimentUtils\Functions\MackyGlassFunction.cs" />
+    <Compile Include="SharpNEATLib\GenomeDecoder.cs" />
+    <Compile Include="SharpNEATLib\Maths\FastRandom.cs" />
+    <Compile Include="SharpNEATLib\Maths\MathsException.cs" />
+    <Compile Include="SharpNEATLib\Maths\RandLib.cs" />
+    <Compile Include="SharpNEATLib\Maths\RouletteWheel.cs" />
+    <Compile Include="SharpNEATLib\Maths\ValueMutation.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\ConnectionGene.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\ConnectionGeneComparer.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\ConnectionGeneList.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\CorrelationItem.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\CorrelationItemType.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\CorrelationResults.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\CorrelationStatistics.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\GenomeFactory.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\IdGeneratorFactory.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\NeatGenome.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\NeuronGene.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\NeuronGeneComparer.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\NeuronGeneList.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\Xml\XmlGenomeWriterStatic.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\Xml\XmlNeatGenomeReader.cs" />
+    <Compile Include="SharpNEATLib\NeatGenome\Xml\XmlNeatGenomeReaderStatic.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\ColorUtilities.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\GridLayoutManager.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\ILayoutManager.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\ModelConnection.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\ModelConnectionList.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\ModelNeuron.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\ModelNeuronList.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\NetworkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SharpNEATLib\NetworkVisualization\NetworkModel.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\NetworkModelPainter.cs" />
+    <Compile Include="SharpNEATLib\NetworkVisualization\Viewport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SharpNEATLib\NeuralNetwork\AbstractNetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\ActivationFunctionFactory.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\ActivationFunctionType.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\BipolarSigmoid.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\ErrorSign.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\Gaussian.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\InverseAbsoluteSigmoid.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\Linear.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\Modulus.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\NullFn.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\PlainSigmoid.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\ReducedSigmoid.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\SigmoidApproximation.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\Sign.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\Sine.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\SteepenedSigmoid.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\SteepenedSigmoidApproximation.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ActivationFunctions\StepFunction.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ConcurrentNetwork\ConcurrentNetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ConcurrentNetwork\Connection.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ConcurrentNetwork\ConnectionList.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ConcurrentNetwork\Neuron.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ConcurrentNetwork\NeuronList.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\CTRNN\CTRNN.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\FastConcurrentNetwork\FastConcurrentMultiplicativeNetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\FastConcurrentNetwork\FloatFastConcurrentNetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\FastConcurrentNetwork\FloatFastConnection.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\FastConcurrentNetwork\FloatFastConnectionComparer.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\IActivationFunction.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\INetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\IntegerFastConcurrentNetwork\IntegerFastConcurrentNetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\IntegerFastConcurrentNetwork\IntegerFastConnection.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\IModule.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\Max.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\MaxAbs.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\Min.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\MinAbs.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\ModularNetwork.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\ModuleFactory.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\ModuleGene.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\ModuleInputNeuron.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\ModuleOutputNeuron.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\ModulePacket.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\ModularNetwork\Multiply.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\NetworkList.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\Xml\XmlNetworkReaderStatic.cs" />
+    <Compile Include="SharpNEATLib\NeuralNetwork\Xml\XmlNetworkWriterStatic.cs" />
+    <Compile Include="SharpNEATLib\Novelty\noveltyfixed.cs" />
+    <Compile Include="SharpNEATLib\Novelty\noveltyhistogram.cs" />
+    <Compile Include="SharpNEATLib\UtilityClasses\ByteCoord.cs" />
+    <Compile Include="SharpNEATLib\UtilityClasses\CircularBuffer.cs" />
+    <Compile Include="SharpNEATLib\UtilityClasses\Coord.cs" />
+    <Compile Include="SharpNEATLib\UtilityClasses\DoubleCircularBuffer.cs" />
+    <Compile Include="SharpNEATLib\UtilityClasses\ListItem.cs" />
+    <Compile Include="SharpNEATLib\UtilityClasses\Utilities.cs" />
+    <Compile Include="SharpNEATLib\Xml\XmlException.cs" />
+    <Compile Include="SharpNEATLib\Xml\XmlUtilities.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharpNEATLib\Experiments\AbstractExperimentView.resx">
+      <DependentUpon>AbstractExperimentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharpNEATLib\NetworkVisualization\NetworkControl.resx">
+      <DependentUpon>NetworkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharpNEATLib\NetworkVisualization\Viewport.resx">
+      <DependentUpon>Viewport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
