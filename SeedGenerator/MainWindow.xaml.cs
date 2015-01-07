@@ -136,10 +136,7 @@ namespace SeedGenerator
         /// </summary>
         private void buttonEvolve_Click(object sender, RoutedEventArgs e)
         {
-            currentGeneration = 0;
-
-            // Create a random (simple) parent for the new initial generation and draw it to the Current Seed slot
-            parentGenome = (NeatGenome)GenomeFactory.CreateGenome(neatParams, idGenerator, numInputs, numOutputs, 1.0f);
+            // Draw the new parent to the Current Parent slot.
             DrawCreatureAtIndex(8, true);
 
             // Generate new offspring from the parent and then draw them.
@@ -158,7 +155,7 @@ namespace SeedGenerator
             newNeuronGeneStructTable.Clear();
 
             for (int i = 0; i < numOffspring; i++)
-                    offspringGenomes.Add(parentGenome);
+                    offspringGenomes.Add(mutate(parentGenome));
 
             currentGeneration++;
         }
